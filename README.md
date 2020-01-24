@@ -36,4 +36,4 @@ For the purposes of this assignment, this class has been included to help convey
 - _size()_ -> size_t
 
 ## UML Diagram
-![UML Diagram](https://raw.githubusercontent.com/frankkulak/CS4500-A1/f4e5e63c464149786d8850563e077e4ee8cc7fa5/part2/uml%20diagram.png?token=AIBEI6HIUZ4D72UXEZXVOPS6FNRBK)
+![UML Diagram](https://github.com/ifteda/CS4500-A1-Part2/blob/master/uml%20diagram.png?raw=true)
