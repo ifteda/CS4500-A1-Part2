@@ -21,6 +21,9 @@ Additional documentation for behavior can be found in the respective .h files.
 - _remove_all()_ -> void
 - _size()_ -> size_t
 
+The methods dequeue() and remove_all() are intended to be used only when the Queue is not empty (i.e. when size() returns a number greater than 0). Like dequeue(), peek() will return a null pointer if called on an empty Queue. The following methods will mutate the Queue: dequeue(), enqueue(), remove_all().  
+For a Queue, to_string() (inherited from Object) will return the string representations of its elements, delimted by a comma and space (", "), all enlosed in square brackets. For example, a Queue containing three String objects - "a", "b", and "c" - will have the following output from to_string(): ["a", "b", "c"]
+
 ## String
 For the purposes of this assignment, this class has been included to help convey the expected behavior of Queue through tests (found in test-queue.cpp).
 **Language:** CwC  
@@ -34,6 +37,9 @@ For the purposes of this assignment, this class has been included to help convey
 - _compare(String*)_ -> size_t
 - _conncat(String*)_ -> String*
 - _size()_ -> size_t
+
+The method compare() behaves similarly to the C library function strcmp(). Given an identical String, the method will return 0. Otherwise, the method returns a negative number if the implicit parameter alphanumerically preceeds the explicit paramater or a positive number if the converse is true.  
+The concat() method will append the given String to end of this String.
 
 ## UML Diagram
 ![UML Diagram](https://github.com/ifteda/CS4500-A1-Part2/blob/master/uml%20diagram.png?raw=true)
