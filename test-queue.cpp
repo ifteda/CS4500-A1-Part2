@@ -115,19 +115,19 @@ void test2() {
     t_false(q->equals(q1));
     t_false(q->hash() == q1->hash());
     t_false(q->to_string() == q1->to_string());
-    t_true(q->peek() == b);
-    t_true(q1->peek() == c);
-
-    t_true(q->dequeue() == b);
-    t_true(q1->dequeue() == c);
-    // with q = ["a"] and q1 = ["a"]
-    t_true(q->size() == 1);
-    t_true(q1->size() == 1);
-    t_true(q->equals(q1));
-    t_true(q->hash() == q1->hash());
-    t_true(q->to_string() == q1->to_string());
     t_true(q->peek() == a);
     t_true(q1->peek() == a1);
+
+    t_true(q->dequeue() == a);
+    t_true(q1->dequeue() == a1);
+    // with q = ["b"] and q1 = ["c"]
+    t_true(q->size() == 1);
+    t_true(q1->size() == 1);
+    t_false(q->equals(q1));
+    t_false(q->hash() == q1->hash());
+    t_false(q->to_string() == q1->to_string());
+    t_true(q->peek() == b);
+    t_true(q1->peek() == c);
 
     q->remove_all();
     q1->remove_all();
@@ -169,11 +169,11 @@ void test3() {
 
     outer->enqueue(inner2);
     t_true(outer->size() == 2);
-    t_true(outer->peek() == inner2);
-
-    t_true(outer->dequeue() == inner2);
-    t_true(outer->size() == 1);
     t_true(outer->peek() == inner1);
+
+    t_true(outer->dequeue() == inner1);
+    t_true(outer->size() == 1);
+    t_true(outer->peek() == inner2);
 
     outer->remove_all();
     t_true(outer->size() == 0);
@@ -206,11 +206,11 @@ void test4() {
 
     q->enqueue(o2);
     t_true(q->size() == 2);
-    t_true(q->peek() == o2);
-
-    t_true(q->dequeue() == o2);
-    t_true(q->size() == 1);
     t_true(q->peek() == o1);
+
+    t_true(q->dequeue() == o1);
+    t_true(q->size() == 1);
+    t_true(q->peek() == o2);
 
     q->remove_all();
     t_true(q->size() == 0);
@@ -225,7 +225,7 @@ int main() {
     test1();
     test2();
     test3();
-    test(4);
+    test4();
     return 0;
 }
 
