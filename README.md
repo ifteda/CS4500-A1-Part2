@@ -25,7 +25,7 @@ The methods dequeue() and remove_all() are intended to be used only when the Que
 For a Queue, to_string() (inherited from Object) will return the string representations of its elements, delimted by a comma and space (", "), all enlosed in square brackets. For example, a Queue containing three String objects - "a", "b", and "c" - will have the following output from to_string(): ["a", "b", "c"]
 
 ## String
-For the purposes of this assignment, this class has been included to help convey the expected behavior of Queue through tests (found in test-queue.cpp).
+For the purposes of this assignment, this class has been included to help convey the expected behavior of Queue through tests (found in test-queue.cpp).  
 **Language:** CwC  
 **Superinterface(s):** Object  
 **Interpretation:** Represents a collection char.  
