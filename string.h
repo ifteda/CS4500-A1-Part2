@@ -59,11 +59,5 @@ public:
      * @arg str String to concatenate
      */
     String* concat(String* str);
-
-    /**
-     * Returns this String as a char*
-     * Inherited from Object
-     */
-    char* to_string();
     
 };

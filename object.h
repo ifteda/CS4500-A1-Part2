@@ -31,10 +31,4 @@ public:
      */
     virtual size_t hash();
 
-    /**
-     * Returns the string representation of this Object
-     * Subclass responsibility
-     */
-    virtual char* to_string();
-    
 };

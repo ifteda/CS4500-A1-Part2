@@ -34,12 +34,6 @@ public:
     size_t hash();
 
     /**
-     * Returns the string representation of this Queue
-     * Inherited from Object
-     */
-    char* to_string();
-
-    /**
      * Returns the number of elements in this Queue
      */
     size_t size();

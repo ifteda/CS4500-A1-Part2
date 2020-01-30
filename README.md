@@ -8,7 +8,6 @@ Additional documentation for behavior can be found in the respective .h files.
 **Behavior:**  
 - _equals(Object*)_ -> bool  
 - _hash()_ -> size_t
-- _to_string()_ -> char*
 
 ## Queue
 **Language:** CwC  
@@ -22,7 +21,6 @@ Additional documentation for behavior can be found in the respective .h files.
 - _size()_ -> size_t
 
 The methods dequeue() and remove_all() are intended to be used only when the Queue is not empty (i.e. when size() returns a number greater than 0). Like dequeue(), peek() will return a null pointer if called on an empty Queue. The following methods will mutate the Queue: dequeue(), enqueue(), remove_all().  
-For a Queue, to_string() (inherited from Object) will return the string representations of its elements, delimted by a comma and space (", "), all enlosed in square brackets. For example, a Queue containing three String objects - "a", "b", and "c" - will have the following output from to_string(): ["a", "b", "c"]
 
 ## String
 For the purposes of this assignment, this class has been included to help convey the expected behavior of Queue through tests (found in test-queue.cpp).  

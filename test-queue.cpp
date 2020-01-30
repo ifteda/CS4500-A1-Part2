@@ -44,10 +44,6 @@ void test1() {
     t_true(a->hash() == a1->hash());
     t_false(a->hash() == b->hash());
     t_false(a->hash() == c->hash());
-    // to_string
-    t_true(strcmp(a->to_string(), a1->to_string()) == 0);
-    t_false(strcmp(a->to_string(), b->to_string()) == 0);
-    t_false(strcmp(a->to_string(), c->to_string()) == 0);
     //compare
     t_true(a->compare(a) == 0);
     t_true(a->compare(a1) == 0);
@@ -79,7 +75,6 @@ void test2() {
     t_true(q1->size() == 0);
     t_true(q->equals(q1));
     t_true(q->hash() == q1->hash());
-    t_true(strcmp(q->to_string(), q1->to_string()) == 0);
     t_true(q->peek() == nullptr);
     t_true(q1->peek() == nullptr);
 
@@ -92,7 +87,6 @@ void test2() {
     t_true(q1->size() == 0);
     t_true(q->equals(q1));
     t_true(q->hash() == q1->hash());
-    t_true(strcmp(q->to_string(), q1->to_string()) == 0);
     t_true(q->peek() == nullptr);
     t_true(q1->peek() == nullptr);
 
@@ -103,7 +97,6 @@ void test2() {
     t_true(q1->size() == 1);
     t_true(q->equals(q1));
     t_true(q->hash() == q1->hash());
-    t_true(strcmp(q->to_string(), q1->to_string()) == 0);
     t_true(q->peek() == a);
     t_true(q1->peek() == a1);
 
@@ -114,7 +107,6 @@ void test2() {
     t_true(q1->size() == 2);
     t_false(q->equals(q1));
     t_false(q->hash() == q1->hash());
-    t_false(strcmp(q->to_string(), q1->to_string()) == 0);
     t_true(q->peek() == a);
     t_true(q1->peek() == a1);
 
@@ -125,7 +117,6 @@ void test2() {
     t_true(q1->size() == 1);
     t_false(q->equals(q1));
     t_false(q->hash() == q1->hash());
-    t_false(strcmp(q->to_string(), q1->to_string()) == 0);
     t_true(q->peek() == b);
     t_true(q1->peek() == c);
 
@@ -136,7 +127,6 @@ void test2() {
     t_true(q1->size() == 0);
     t_true(q->equals(q1));
     t_true(q->hash() == q1->hash());
-    t_true(strcmp(q->to_string(), q1->to_string()) == 0);
     t_true(q->peek() == nullptr);
     t_true(q1->peek() == nullptr);
 
