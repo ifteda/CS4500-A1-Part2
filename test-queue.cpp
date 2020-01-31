@@ -56,6 +56,11 @@ void test1() {
     t_true(c->size() == 2);
 
     OK("1");
+
+    delete a;
+    delete a1;
+    delete b;
+    delete c;
 }
 
 /**
@@ -134,6 +139,13 @@ void test2() {
     t_true(q1->dequeue() == nullptr);
 
     OK("2");
+
+    delete q;
+    delete q1;
+    delete a;
+    delete a1;
+    delete b;
+    delete c;
 }
 
 /**
@@ -171,6 +183,10 @@ void test3() {
     t_true(outer->dequeue() == nullptr);  
 
     OK("3");
+
+    delete outer;
+    delete inner1;
+    delete inner2;
 }
 
 /**
@@ -208,6 +224,10 @@ void test4() {
     t_true(q->dequeue() == nullptr);  
 
     OK("4");
+
+    delete q;
+    delete o1;
+    delete o2;
 }
 
 
