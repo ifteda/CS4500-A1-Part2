@@ -51,7 +51,7 @@ public:
      * or >0 if it has a higher ASCII value in this String than in the given String
      * @arg str String against which to compare
      */
-    size_t compare(String* str);
+    int compare(String* str);
 
     /** 
      * Concatenates the given String at the end of this String
